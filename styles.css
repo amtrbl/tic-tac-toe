@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;           
+    margin: 0;               
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.cell:hover {
+   transform: scale(1.1); 
+    background-color: rgba(0, 0, 0, 0.05); 
+}
+/* when someone wins, remove hover styling */
+.no-hover .cell:hover {
+    transform: none;               
+    background-color: transparent; 
+}
+
+.cell.highlight {
+    background-color: rgba(255, 223, 0, 0.5);  /* Yellow background for the winning cells */
+}
+
+/* avoid hover styling on winning cells */
+.cell.highlight:hover {
+    transform: none;              
+    background-color: rgba(255, 223, 0, 0.5); 
+}
+
+
+#gameContainer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
