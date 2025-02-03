@@ -1,2 +1,4 @@
-# tic-tac-toe
-basic tic tac toe game (+ implementing ai opponent later on)
+# tic-tac-toe (WIP)
+This project is still a work in progress.
+
+Currently a basic tic tac toe game, will be implementing an ai opponent later on. 
