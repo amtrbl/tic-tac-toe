@@ -13,7 +13,7 @@ const winningCombo = [
 ];
 
 let placeholder = ["", "", "", "", "", "", "", "", "",];
-let currentPlayer = "X";
+let currentPlayer = "O"; //Ai will be X
 let gameRunning = false;
 
 initializeGame();
@@ -44,7 +44,7 @@ function updateCell(cell, index) {
 }
 
 function changePlayer() {
-    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+    currentPlayer = (currentPlayer == 'O') ? 'X' : 'O';
     statusText.textContent =  `${currentPlayer}'s turn`;
 }
 
@@ -96,7 +96,7 @@ function restartGame() {
         cell.classList.remove('highlight'); // remove any highlight 
     });
 
-    currentPlayer = "X";
+    currentPlayer = "O";
     gameRunning = true;
 
     statusText.textContent =  `${currentPlayer}'s turn`;
